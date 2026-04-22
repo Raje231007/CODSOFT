@@ -1,0 +1,26 @@
+import random
+your_points=0
+comp_points=0
+length=int(input("Enter duel length [ex 5 or 6] : "))
+for i in range(length):
+    choice=input("Enter your choice: (rock/paper/scissors)")
+    comp=random.choice(["rock","paper","scissors"])
+    print("you:", choice)
+    print("computer:", comp)
+    if choice==comp:
+        print("Match is TIE!!!")
+    elif choice=="rock" and comp== "scissors":
+        print("CONGRATS!!! You win.")
+        your_points+=1
+    elif choice=="paper" and comp=="rock":
+        print("CONGRATS!!! You win")
+        your_points+=1
+    elif choice=="scissors" and comp=="paper":
+        print("CONGRATS!!! You win")
+        your_points+=1
+    else:
+        print("Ofooo!!! you lose")
+        comp_points+=1
+print("Duel ends")
+print("your score: ",your_points)
+print("computer score: ",comp_points)
