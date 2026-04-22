@@ -1,0 +1,33 @@
+def calculate(a,b,choice):
+    if choice==1:
+        return a + b
+    elif choice ==2:
+        return a - b
+    elif choice ==3:
+        return a * b
+    elif choice ==4:
+        return a / b
+        if b == 0:
+            return "can't be divided by zero"
+        else:
+            return a/b
+    else:
+        return "invalid operator"
+def main():
+    num1=input("Enter number 1: ")
+    num2=input("entr number 2: ")
+    try:
+        a= float(num1)
+        b=float(num2)
+    except ValueError:
+        print("invalid entry ")
+    operators={"1":"+","2":"-","3":"×","4":"/"}
+    print("Choose operation")
+    print("(1) addition")
+    print("(2) subtractio")
+    print("(3) multiplication")
+    print("(4) division ")
+    choice =int(input("Enter the choosen operator number"))
+    result=calculate(a,b,choice)
+    print(result)
+main()
